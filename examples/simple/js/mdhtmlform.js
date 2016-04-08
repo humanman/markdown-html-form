@@ -102,6 +102,24 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   })();
 
+      $(".mdhtmlform-html").hide();
+
+       $("button#preview-html").on("click", function(e) {
+         $(function() {
+             return $(".mdhtmlform-md").each(function() {
+                 return new MdHtmlForm(this);
+             });
+         });
+          var html;
+          html = $("textarea.mdhtmlform-html").val();
+          e.preventDefault();
+          $(".mdhtmlform-html").show();
+
+
+      });
+
+
+
   
 
 }).call(this);
